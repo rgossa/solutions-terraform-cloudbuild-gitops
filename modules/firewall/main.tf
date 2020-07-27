@@ -18,7 +18,7 @@ locals {
 }
 
 resource "google_compute_firewall" "allow-http" {
-  name    = concat(local.network "-allow-http")
+  name    = concat(local.network, "-allow-http")
   network = local.network
   project = var.project
 
